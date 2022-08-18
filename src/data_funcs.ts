@@ -8,6 +8,8 @@ export async function getPrices() {
     .get("https://cryptoapilambda.herokuapp.com/coinpaprika")
     .then((res) => {
       dataArray = res.data.all_coins;
-    });
+    })
+    .catch((err) => {
+    console.log(err});
   return response;
 }
